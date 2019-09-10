@@ -14,6 +14,7 @@ import './App.css';
 // import Hello from './Components/function-component.js';
 // import Hello from './Components/Pass-value.js';
 // import Tab from './Components/tab-function-component.js';
+import TabClass from './Components/class-state.js';
 
 /**
 *	函数组件:大驼峰命名法
@@ -61,25 +62,38 @@ import './App.css';
 // }
 
 // 类组件
-class App extends React.Component {
-	// 固定用法
-	constructor (props) {
-		super(props)
-		// this必须在super后面
-		this.state = {
-			name: '张三',
-			age: '18'
-		}
-	}
+// class App extends React.Component {
+// 	// 固定用法
+// 	constructor (props) {
+// 		super(props)
+// 		// this必须在super后面
+// 		this.state = {
+// 			name: '张三',
+// 			age: '18'
+// 		}
+// 	}
 
-	seyhi () {
-		console.log(this.name + 'hello');
-	}
-	// 类组件的模板必须通过render方法提供
-	// render方法名称是固定的，用于渲染模板
+// 	seyhi () {
+// 		console.log(this.name + 'hello');
+// 	}
+// 	// 类组件的模板必须通过render方法提供
+// 	// render方法名称是固定的，用于渲染模板
+// 	render () {
+// 		return (
+// 			<div>{this.state.name + this.state.age}</div>
+// 		)
+// 	}
+// }
+
+// tab-class
+class App extends React.Component {
+	
 	render () {
+		// let name = '张三';
 		return (
-			<div>{this.state.name + this.state.age}</div>
+			<div>
+				<TabClass uname='张三'></TabClass>
+			</div>
 		)
 	}
 }
