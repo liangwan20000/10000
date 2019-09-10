@@ -10,8 +10,8 @@ function Tab (props) {
 	let divs = [];
 	// 动态创建tab
 	props.list.tabData.forEach(item => {
-		btns.push(<button className={ props.currentId === item.id ? "current" : '' } key={ item.id }>{ item.taitle }</button>);
-		divs.push(<div className={ props.currentId === item.id ? "current" : '' } key={ item.id }>{ item.content }</div>);
+		btns.push(<button className={ props.list.currentId === item.id ? "current" : '' } key={ item.id }>{ item.taitle }</button>);
+		divs.push(<div className={ props.list.currentId === item.id ? "current" : '' } key={ item.id }>{ item.content }</div>);
 	});
 	return (
 		// 添加类名，以便添加子节点样式

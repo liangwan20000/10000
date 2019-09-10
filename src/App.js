@@ -13,7 +13,7 @@ import './App.css';
 */
 // import Hello from './Components/function-component.js';
 // import Hello from './Components/Pass-value.js';
-import Tab from './Components/tab-function-component.js';
+// import Tab from './Components/tab-function-component.js';
 
 /**
 *	函数组件:大驼峰命名法
@@ -31,33 +31,56 @@ import Tab from './Components/tab-function-component.js';
 // };
 
 // tab案例
-function App () {
-	let tabInfo = {
-		tabData : [
-			{
-				id: 1,
-				taitle: 'tom',
-				content: 'catch jerry'
-			},
-			{
-				id: 2,
-				taitle: 'jerray',
-				content: '调戏 tom'
-			},
-			{
-				id: 3,
-				taitle: 'kitty',
-				content: '被 tom and Jerry 调戏'
-			}
-		],
-		// 定义一个状态位
-		currentId : 2
-	};
-	return (
-		<div>
-			<Tab list={tabInfo} currentId={2}></Tab>
-		</div>
-	)
+// function App () {
+// 	let tabInfo = {
+// 		tabData : [
+// 			{
+// 				id: 1,
+// 				taitle: 'tom',
+// 				content: 'catch jerry'
+// 			},
+// 			{
+// 				id: 2,
+// 				taitle: 'jerray',
+// 				content: '调戏 tom'
+// 			},
+// 			{
+// 				id: 3,
+// 				taitle: 'kitty',
+// 				content: '被 tom and Jerry 调戏'
+// 			}
+// 		],
+// 		// 定义一个状态位
+// 		currentId : 2
+// 	};
+// 	return (
+// 		<div>
+// 			<Tab list={tabInfo}></Tab>
+// 		</div>
+// 	)
+// }
+
+// 类组件
+class App extends React.Component {
+	// 固定用法
+	constructor (props) {
+		super(props)
+		// this必须在super后面
+		this.state = {
+			name: '张三',
+			age: '18'
+		}
+	}
+
+	seyhi () {
+		console.log(this.name + 'hello');
+	}
+	
+	render () {
+		return (
+			<div>{this.state.name + this.state.age}</div>
+		)
+	}
 }
 
 /**
