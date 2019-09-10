@@ -75,7 +75,8 @@ class App extends React.Component {
 	seyhi () {
 		console.log(this.name + 'hello');
 	}
-	
+	// 类组件的模板必须通过render方法提供
+	// render方法名称是固定的，用于渲染模板
 	render () {
 		return (
 			<div>{this.state.name + this.state.age}</div>
