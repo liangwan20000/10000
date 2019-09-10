@@ -1,4 +1,21 @@
 /*样式*/
-.active {
+/*.active {
 	background-color: lime;
+}*/
+.active {
+	color: red;
+}
+.abc div {
+	display: none;
+	background-color: #eee;
+	width: 300px;
+	height: 200px;
+}
+/*需要选中哪个节点下的状态*/
+.abc div.current {
+	display: block;
+	color: red;
+}
+.abc button.current {
+	color: red;
 }
