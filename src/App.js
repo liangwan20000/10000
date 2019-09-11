@@ -14,7 +14,8 @@ import './App.css';
 // import Hello from './Components/function-component.js';
 // import Hello from './Components/Pass-value.js';
 // import Tab from './Components/tab-function-component.js';
-import SetState from './Components/class-setState.js';
+// import SetState from './Components/class-setState.js';
+import Event from './Components/event.js';
 
 /**
 *	函数组件:大驼峰命名法
@@ -99,7 +100,7 @@ import SetState from './Components/class-setState.js';
 // }
 
 // class的生命周期
-class App extends React.Component {
+// class App extends React.Component {
 	// 构造方法定义属性
 	// constructor (props) {
 	// 	// 向基础类传递值
@@ -120,10 +121,23 @@ class App extends React.Component {
 	// }
 	// 类组件的模板必须通过render方法提供
 	// render方法名称是固定的，用于渲染模板
+// 	render () {
+// 		return (
+// 			<div>
+// 				<SetState name='张三'></SetState>
+// 			</div>
+// 		)
+// 	}
+// }
+
+// 类组建的事件处理
+class App extends React.Component {
+	// 组建的模板必须通过render方法提供
+	// render方法名称是固定的，用于渲染模板
 	render () {
 		return (
 			<div>
-				<SetState name='张三'></SetState>
+				<Event></Event>
 			</div>
 		)
 	}
