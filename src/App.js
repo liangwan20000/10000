@@ -16,7 +16,8 @@ import './App.css';
 // import Tab from './Components/tab-function-component.js';
 // import SetState from './Components/class-setState.js';
 // import Event from './Components/event.js';
-import Event from './Components/event-default-behavior.js';
+// import Event from './Components/event-default-behavior.js';
+import EventProps from './Components/event-props.js';
 
 /**
 *	函数组件:大驼峰命名法
@@ -138,7 +139,7 @@ class App extends React.Component {
 	render () {
 		return (
 			<div>
-				<Event></Event>
+				<EventProps></EventProps>
 			</div>
 		)
 	}
