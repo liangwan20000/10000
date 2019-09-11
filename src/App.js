@@ -15,7 +15,8 @@ import './App.css';
 // import Hello from './Components/Pass-value.js';
 // import Tab from './Components/tab-function-component.js';
 // import SetState from './Components/class-setState.js';
-import Event from './Components/event.js';
+// import Event from './Components/event.js';
+import Event from './Components/event-default-behavior.js';
 
 /**
 *	函数组件:大驼峰命名法

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 基于类创建对象
+		class Student {
+			constructor (name, age) {
+				this.name = name;
+				this.age = age
+			}
+
+			showInfo () {
+				console.log(this.name + '的年龄是' + this.age);
+			}
+		};
+
+		// let student = new Student('张三', 30);
+		// student.showInfo();
+		class TypeStudent extends Student {
+			constructor (name, age, type) {
+				super(name, age);
+				this.type = type;
+			}
+			showIn () {
+				console.log(this.name + '今年' + this.age + '是' + this.type);
+			}
+		}
+		let zs = new TypeStudent('张三', 18, '三好学生');
+		console.log(zs);
+		zs.showInfo();
+		zs.showIn();
+	</script>
+</body>
+</html>
