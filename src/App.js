@@ -17,7 +17,8 @@ import './App.css';
 // import SetState from './Components/class-setState.js';
 // import Event from './Components/event.js';
 // import Event from './Components/event-default-behavior.js';
-import EventProps from './Components/event-props.js';
+// import EventProps from './Components/event-props.js';
+import Tab from './Components/tab-event.js';
 
 /**
 *	函数组件:大驼峰命名法
@@ -133,13 +134,26 @@ import EventProps from './Components/event-props.js';
 // }
 
 // 类组建的事件处理
+// class App extends React.Component {
+// 	// 组建的模板必须通过render方法提供
+// 	// render方法名称是固定的，用于渲染模板
+// 	render () {
+// 		return (
+// 			<div>
+// 				<EventProps></EventProps>
+// 			</div>
+// 		)
+// 	}
+// }
+
+// tab-event
 class App extends React.Component {
 	// 组建的模板必须通过render方法提供
-	// render方法名称是固定的，用于渲染模板
+	// render是固定写法，提供渲染的模板
 	render () {
 		return (
 			<div>
-				<EventProps></EventProps>
+				<Tab></Tab>
 			</div>
 		)
 	}
