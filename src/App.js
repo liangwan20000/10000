@@ -14,7 +14,7 @@ import './App.css';
 // import Hello from './Components/function-component.js';
 // import Hello from './Components/Pass-value.js';
 // import Tab from './Components/tab-function-component.js';
-import TabClass from './Components/class-state.js';
+import LifeCycle from './Components/life-cycle.js';
 
 /**
 *	函数组件:大驼峰命名法
@@ -85,14 +85,46 @@ import TabClass from './Components/class-state.js';
 // 	}
 // }
 
-// tab-class
-class App extends React.Component {
+// class-state
+// class App extends React.Component {
 	
+// 	render () {
+// 		// let name = '张三';
+// 		return (
+// 			<div>
+// 				<TabClass uname='张三'></TabClass>
+// 			</div>
+// 		)
+// 	}
+// }
+
+// class的生命周期
+class App extends React.Component {
+	// 构造方法定义属性
+	constructor (props) {
+		// 向基础类传递值
+		super(props);
+		// constructor中，this前必须添加super
+		this.state = {
+			flag : true
+		}
+	}
+	// 组件完成挂载之后触发
+	componentDidMount () {
+		setTimeout(() => {
+			// 修改状态必须使用setState方法
+			this.setState({
+				flag : false
+			})
+		}, 3000)
+	}
+	// 类组件的模板必须通过render方法提供
+	// render方法名称是固定的，用于渲染模板
 	render () {
-		// let name = '张三';
 		return (
 			<div>
-				<TabClass uname='张三'></TabClass>
+				{/*短路表达式，两个都为真取后面的*/}
+				{this.state.flag && <LifeCycle></LifeCycle>}
 			</div>
 		)
 	}
