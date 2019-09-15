@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>
+			<a href="#home">主页</a>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<a href="#tech">科技</a>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<a href="#edu">主页</a>
+		</li>
+	</ul>
+	<div></div>
+	<script>
+		// 获取视图容器
+		let div = document.querySelector('div');
+		// 监听hash改变事件
+		window.onhashchange = function () {
+			// 可以获取 location 及相关参数
+			let hash = location.hash.substr(1);// 从索引 1 截取
+			switch (hash) {
+				case 'home':
+					div.innerText = '主页';
+					break;
+				case 'tech':
+					div.innerText = '科技';
+					break;
+				case 'edu':
+					div.innerText = '教育';
+					break;
+				default :
+					break;
+			}
+		}
+	</script>
+</body>
+</html>
