@@ -72,20 +72,28 @@ let Register = class extends React.Component {
 		)
 	}
 }
+// 不存在
+let Noview = class extends React.Component {
+	render () {
+		return (
+			<div>不存在的</div>
+		)
+	}
+}
 
 // 创建组件
 class BrowserRoutercomponent extends React.Component {
 	// render导出渲染的模板
 	render () {
 		return (
-
-			// react-router需要在BrowserRouter组件包裹下使用
 			<div>
-			{/*<BrowserRouter>*/}
 				<ul>
 					<li>
 						{/*Link组件表示跳转元素*/}
-						<Link to="/home">主页</Link>
+						<Link to="/">主页</Link>
+					</li>
+					<li>
+						<Link to="/test">这是哪里</Link>
 					</li>
 					<li>
 						<Link to="/login">登录</Link>
@@ -94,11 +102,14 @@ class BrowserRoutercomponent extends React.Component {
 						<Link to="/register">注册</Link>
 					</li>
 				</ul>
+				{/*Switch首字母大写，exact做精确匹配*/}
+				<Switch>
 				{/*使用 Route 视图容器，把请求地址与响应组件对应;Route展示组件内容，它也会占用空间*/}
-				<Route path='/home' component={ Home }></Route>
-				<Route path='/login' component={ Login }></Route>
-				<Route path='/register' component={ Register }></Route>
-			{/*// </BrowserRouter>*/}
+					<Route path='/' exact component={ Home }></Route>
+					<Route path='/login' component={ Login }></Route>
+					<Route path='/register' component={ Register }></Route>
+					<Route component={Noview}/>
+				</Switch>
 			</div>
 		)
 	}
