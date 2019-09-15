@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.css';
 // 引入组件
+import { BrowserRouter } from 'react-router-dom';
 // 路由基本使用
-import BrowserRouter from './components/router.js';
+import BrowserRouter1 from './components/router.js';
 
 function App() {
     return (
-        <div>
-            <BrowserRouter></BrowserRouter>
-        </div>
+        <BrowserRouter>
+            <BrowserRouter1></BrowserRouter1>
+        </BrowserRouter>
     );
 }
 
