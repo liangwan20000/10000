@@ -1,5 +1,5 @@
 /**
-*	react-router
+*	嵌套路由、switch、exact、switch不添加path时默认显示
 */
 /**
 *	引入React核心文件
