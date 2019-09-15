@@ -7,12 +7,14 @@ import { BrowserRouter } from 'react-router-dom';
 // 重定向
 // import Redirectcomponent from './components/04-Redirect.js';
 // 动态路由
-import Dynamic from './components/05-dynamic.js';
+// import Dynamic from './components/05-dynamic.js';
+// 编程式导航
+import ProgrammingNavigation from './components/06-Programming-Navigation.js';
 
 function App() {
     return (
         <BrowserRouter>
-            <Dynamic></Dynamic>
+            <ProgrammingNavigation></ProgrammingNavigation>
         </BrowserRouter>
     );
 }
